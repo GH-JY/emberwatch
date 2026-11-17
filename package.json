@@ -1,0 +1,8 @@
+{
+  "name": "emberwatch",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Emberwatch: keep a signal fire alive through seven nights on the moor.",
+  "type": "module",
+  "license": "MIT"
+}

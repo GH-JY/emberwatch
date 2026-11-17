@@ -1,14 +1,20 @@
-// A working best-game-01 entry (Node 22, standard library only): the game is this directory's
-// game/ folder, plain static files a desktop browser loads offline (game/index.html and its ES
-// modules, no library and no network request), and the program hands it in. It copies game/ and
-// screenshots/ from beside this file to /output and writes /output/dossier.json, the summary the
-// judge reads, with the vendored make.fun library. A starting point, not a winner: Block Dodger, a
-// plain 2D canvas game where a paddle dodges falling blocks and catches coins, with a title screen,
-// score, lives and levels, game over and restart, flat colours and no sound. Build your own game
-// (any genre, any library you vendor under game/, or none), put your 3 or 4 PNG or JPEG screenshots
-// in screenshots/ (the first by name is the cover) and run it.
+// Emberwatch: a seven-night survival game for best-game-01. The keeper of a signal fire walks out
+// into the dark for wood, carries it back and feeds the fire before it burns down, and holds the
+// shades off with a mouse-aimed lantern beam and a flare. Lose all three hearts or let the fire die
+// and the watch ends; keep it lit for seven nights and the sun comes up. Each dawn offers a gift
+// that changes the run, and the game remembers your best score between visits.
 //
-// Serve it locally with `node serve.ts`, then open http://localhost:8080.
+// The game is this directory's game/ folder: plain static files a desktop browser loads offline
+// (game/index.html and its ES modules, no library and no network request), drawn to a fixed
+// 1280x720 canvas at a fixed 60 Hz step with synthesized WebAudio. There are no images or audio
+// files; the scenery, the shades, the flames and every sound are generated in code from a seeded
+// random stream, so ?seed=... and ?shot=start|play|upgrade|win stage the same frame again and again
+// (those are the queries the four screenshots in screenshots/ were taken from).
+//
+// This program copies game/ and screenshots/ from beside this file to /output and writes
+// /output/dossier.json, the summary the judge reads, with the vendored make.fun library.
+//
+// Serve it locally with `node serve.ts`, then open http://localhost:8080 (pass --port to change).
 // Outside the grader's container, MAKEFUN_OUTPUT_DIR stands in for /output:
 //   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 
